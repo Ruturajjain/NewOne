@@ -29,6 +29,18 @@ class College(models.Model):
         db_table = 'colg'
         
     
+class Subject(models.Model):
+    name  = models.CharField(max_length=100)
+    marks = models.IntegerField()
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        db_table = 'subj'
+        
 from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver

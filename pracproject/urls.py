@@ -25,7 +25,7 @@ schema_view = get_swagger_view(title='Studetn Operation API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',include(router.urls)),
+    path('',include(router.urls)),
     path('login/', obtain_auth_token, name='login'),
     # re_path(r'^$', schema_view),
     

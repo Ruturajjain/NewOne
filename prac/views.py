@@ -3,8 +3,8 @@ from rest_framework.viewsets import *
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 
-from prac.models import College, Student
-from prac.serializers import Collegeserializer, Studentserializer
+from prac.models import College, Student, Subject
+from prac.serializers import Collegeserializer, Studentserializer, Subjectserializer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import *
 # Create your views here.
@@ -16,12 +16,18 @@ class StudentViewset(ModelViewSet):
     permission_classes = [IsAdminUser]
 
     
-    
 class CollegeViewset(ModelViewSet):
     queryset = College.objects.all()
     serializer_class = Collegeserializer
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAdminUser]
+
+
+class SubjectViewset(ModelViewSet):
+    queryset = Subject.objects.all()
+    serializer_class = Subjectserializer
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
     
     
 from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView, DestroyAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
