@@ -12,4 +12,8 @@ class Collegeserializer(serializers.ModelSerializer):
     class Meta:
         model = College
         fields = '__all__'
-        
+
+class Subjectserializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subject
+        fields = '__all__'       
