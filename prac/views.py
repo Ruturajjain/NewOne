@@ -24,24 +24,24 @@ class CollegeViewset(ModelViewSet):
     permission_classes = [IsAdminUser]
     
     
-# from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView, DestroyAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView, UpdateAPIView, RetrieveAPIView, DestroyAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
-# class StudListC(ListAPIView):      #inherit genericApiview, ListModelMixin
-#     queryset = Student.objects.all()    #genericApi
-#     serializer_class = Studentserializer  #genericApi
+class StudListC(ListAPIView):      #inherit genericApiview, ListModelMixin
+    queryset = Student.objects.all()    #genericApi
+    serializer_class = Studentserializer  #genericApi
     
-# class StudCreateC(CreateAPIView):
-#     queryset = Student.objects.all()    #genericApi
-#     serializer_class = Studentserializer  #genericApi
+class StudCreateC(CreateAPIView):
+    queryset = Student.objects.all()    #genericApi
+    serializer_class = Studentserializer  #genericApi
     
-# class StudRetrC(RetrieveAPIView):
-#     queryset = Student.objects.all()    #genericApi
-#     serializer_class = Studentserializer  #genericApi
+class StudRetrC(RetrieveAPIView):
+    queryset = Student.objects.all()    #genericApi
+    serializer_class = Studentserializer  #genericApi
     
-# class StudUpdtC(UpdateAPIView):
-#     queryset = Student.objects.all()    #genericApi
-#     serializer_class = Studentserializer  #genericApi
+class StudUpdtC(UpdateAPIView):
+    queryset = Student.objects.all()    #genericApi
+    serializer_class = Studentserializer  #genericApi
     
-# class StudDetrC(DestroyAPIView):
-#     queryset = Student.objects.all()    #genericApi
-#     serializer_class = Studentserializer  #genericApi
+class StudDetrC(DestroyAPIView):
+    queryset = Student.objects.all()    #genericApi
+    serializer_class = Studentserializer  #genericApi

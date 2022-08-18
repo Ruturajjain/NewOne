@@ -25,11 +25,11 @@ schema_view = get_swagger_view(title='Studetn Operation API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include(router.urls)),
+    # path('',include(router.urls)),
     path('login/', obtain_auth_token, name='login'),
     # re_path(r'^$', schema_view),
     
-    #Concrete APIView classess
+    # Concrete APIView classess
     path("s-list-c/", StudListC.as_view()),      
     path("s-create-c/", StudCreateC.as_view()),      
     path("s-retr-c/<int:pk>/", StudRetrC.as_view()),      
