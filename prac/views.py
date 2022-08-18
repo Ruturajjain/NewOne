@@ -14,6 +14,7 @@ class StudentViewset(ModelViewSet):
     serializer_class = Studentserializer
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAdminUser]
+
     
     
 class CollegeViewset(ModelViewSet):
